@@ -3,6 +3,12 @@ print("Running...")
 
 import subprocess
 
-HIMALAYA_LIST = "/root"
+HIMALAYA_LIST = "/root/himalaya_list.sh"
 
-subprocess.run(["bash", ])
+result = subprocess.run(
+    ["bash",HIMALAYA_LIST],
+    capture_output=True,
+    text=True,
+    check=True)
+
+print(f"{result}")
