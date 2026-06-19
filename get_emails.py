@@ -12,7 +12,6 @@ result = subprocess.run(
     text=True,
     check=True)
 
-print(f"{result.stdout}")
 emails = json.loads(result.stdout)
 
 for e in emails:
