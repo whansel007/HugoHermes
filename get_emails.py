@@ -13,5 +13,5 @@ result = subprocess.run(
     check=True)
 
 print(f"{result.stdout}")
-emails = json.load(result.stdout)
+emails = json.loads(result.stdout)
 print(f"Yo this is the email results : \n {emails}")
