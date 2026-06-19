@@ -2,6 +2,7 @@
 print("Running...")
 
 import subprocess
+import json
 
 HIMALAYA_LIST = "/root/.hermes/scripts/HugoHermes/himalaya_list.sh"
 
@@ -11,4 +12,6 @@ result = subprocess.run(
     text=True,
     check=True)
 
-print(f"{result}")
+print(f"{result.stdout}")
+emails = json.load(result.stdout)
+print(f"Yo this is the email results : \n {emails}")
