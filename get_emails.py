@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-print("Running...")
-
 import subprocess
 import json
 
-HIMALAYA_LIST = "/root/.hermes/scripts/HugoHermes/himalaya_list.sh"
+HIMALAYA_LIST = "/root/.hermes/scripts/himalaya_list.sh"
 
 result = subprocess.run(
     ["bash",HIMALAYA_LIST],
