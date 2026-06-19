@@ -3,7 +3,7 @@ print("Running...")
 
 import subprocess
 
-HIMALAYA_LIST = "/root/himalaya_list.sh"
+HIMALAYA_LIST = "/root/.hermes/scripts/HugoHermes/himalaya_list.sh"
 
 result = subprocess.run(
     ["bash",HIMALAYA_LIST],
