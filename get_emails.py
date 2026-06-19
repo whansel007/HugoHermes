@@ -15,3 +15,6 @@ result = subprocess.run(
 print(f"{result.stdout}")
 emails = json.loads(result.stdout)
 print(f"Yo this is the email results : \n {emails}")
+
+for e in emails:
+    print(f"[{e.id}] : {e.subject}\nFrom : {e["from"].addr} \n")
