@@ -1,3 +1,3 @@
 #! /usr/bin/bash
 
-himalaya envelope list -o json not flag seen
+/usr/local/bin/himalaya envelope list --config /root/.config/himalaya/config.toml --output json
