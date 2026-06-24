@@ -28,5 +28,3 @@ headers = {
 
 response = requests.patch(f"https://api.notion.com/v1/pages/{page_id}", headers=headers, json=data)
 print(response.json())
-
-
