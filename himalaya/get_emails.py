@@ -13,4 +13,4 @@ result = subprocess.run(
 emails = json.loads(result.stdout)
 
 for e in emails:
-    print(f"✉️ [{e['id']}] : {e['subject']}\nFrom : {e['from']['addr']} \n Date : {e['ate']}")
+    print(f"✉️ [{e['id']}] : {e['subject']}\nFrom : {e['from']['addr']} \n Date : {e['date']}")
