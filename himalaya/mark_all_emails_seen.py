@@ -3,6 +3,7 @@ import subprocess
 import json
 
 HIMALAYA_LIST = "/root/.hermes/scripts/himalaya/himalaya_list.sh"
+HIMALAYA_MARK_SEEN = "/root/.hermes/scripts/himalaya/himalaya_mark_seen.sh"
 
 result = subprocess.run(
     ["bash",HIMALAYA_LIST],
@@ -13,4 +14,8 @@ result = subprocess.run(
 emails = json.loads(result.stdout)
 
 for e in emails:
-    print(f"✉️ [{e['id']}] : {e['subject']}\nFrom : {e['from']['addr']} \n Date : {e['date']}")
+    subprocess.run(
+        ["bash", HIMALAYA_MARK_SEEN, e['id']],
+        capture_output=True,
+        text=True,
+        check=True)
