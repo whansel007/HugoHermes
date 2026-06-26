@@ -14,4 +14,4 @@ emails = json.loads(result.stdout)
 
 for e in emails:
     if "Seen" not in e['flags']:
-        print(f"✉️ [{e['id']}] : {e['subject']}\nFrom : {e['from']['addr']} \n Date : {e['date']} \n")
+        print(f"✉️ [{e['id']}] : {e['subject']}\nFrom : {e['from']['addr']} \nDate : {e['date']} \n")
