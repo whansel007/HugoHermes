@@ -15,7 +15,4 @@ emails = json.loads(result.stdout)
 
 for e in emails:
     subprocess.run(
-        ["bash", HIMALAYA_MARK_SEEN, e['id']],
-        capture_output=True,
-        text=True,
-        check=True)
+        ["bash", HIMALAYA_MARK_SEEN, e['id']])
