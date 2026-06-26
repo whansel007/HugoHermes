@@ -1,6 +1,5 @@
 #! /usr/bin/bash
 
 /usr/local/bin/himalaya flag \
-add "Seen" $(1) \
---config /root/.config/himalaya/config.toml \
---output json
+add "Seen" 9185 \
+--config /root/.config/himalaya/config.toml
