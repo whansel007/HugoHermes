@@ -219,3 +219,40 @@ __marimo__/
 
 # Test
 test.ipynb
+
+# Hermes Exclusion             
+config.yaml.bak.20260614_192616  
+models_dev_cache.json
+audio_cache                      
+cron                             
+node
+auth.json                        
+gateway.lock                     
+ollama_cloud_models_cache.json
+auth.lock                        
+gateway.pid                      
+pairing
+bin                              
+gateway_state.json               
+provider_models_cache.json
+cache                            
+gateway_voice_mode.json          
+sandboxes
+channel_directory.json           
+hooks                            
+config.yaml                      
+image_cache                      
+sessions
+config.yaml.bak.20260606_090157  
+kanban.db                        
+config.yaml.bak.20260606_090834  
+kanban.db.init.lock              
+state.db
+config.yaml.bak.20260607_133633  
+logs                             
+state.db-shm
+config.yaml.bak.20260614_104907  
+lsp                              
+state.db-wal
+config.yaml.bak.20260614_105657  
+memories
