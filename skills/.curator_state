@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/root/.hermes/logs/curator/20260627-103356",
+  "last_run_at": "2026-06-27T10:33:56.983216+00:00",
+  "last_run_duration_seconds": 24.519149,
+  "last_run_summary": "auto: no changes; llm: API call failed after 3 retries: HTTP 429: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs…\narchived 2 skill(s):\n  • hermes-agent-skill-authoring → hermes-agent\n  • teams-meeting-pipeline → google-workspace\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin google-workspace",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 3
+}

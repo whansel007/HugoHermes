@@ -1,0 +1,48 @@
+{
+  "jobs": [
+    {
+      "id": "4e7b99c51d5a",
+      "name": "Fetch the 3 latest CS/AI arXiv papers and 1 random",
+      "prompt": "Fetch the 3 latest CS/AI arXiv papers and 1 random non-CS paper. Provide the title, link, and one sentence of summary for each. Keep it extremely concise to avoid API rate limits. ALWAYS include the links.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 7 * * *",
+        "display": "30 7 * * *"
+      },
+      "schedule_display": "30 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-13T07:52:42.470584+08:00",
+      "next_run_at": "2026-06-14T07:30:00+08:00",
+      "last_run_at": "2026-06-13T07:54:53.441406+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6075689580",
+        "chat_name": "William Hansel",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-13T07:54:53.442471+08:00"
+}
