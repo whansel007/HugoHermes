@@ -1,29 +1,44 @@
-import subprocess
-import json
+import requests
 import os
 
-page_id = "386960a2-ed91-8161-880f-cbda7d43196c"
+page_id = "386960a2-ed91-81e9-80a1-f0fdd375a0fe"
 api_token = os.environ.get("NOTION_API_KEY")
 
 data = {
     "properties": {
         "Date": {
             "date": {
-                "start": "2026-06-21T21:00:00",
-                "end": "2026-06-21T22:00:00"
+                "start": "2026-06-21T21:00:00+08:00",
+                "end": "2026-06-21T21:30:00+08:00"
             }
+        },
+        "Priority": {
+            "select": {
+                "name": "Low"
+            }
+        },
+        "Tags": {
+            "select": {
+                "name": "Life"
+            }
+        },
+        "Location": {
+            "rich_text": [
+                {
+                    "text": {
+                        "content": "Bed"
+                    }
+                }
+            ]
         }
     }
 }
 
-cmd = [
-    "curl", "-s", "-X", "PATCH",
-    f"https://api.notion.com/v1/pages/{page_id}",
-    "-H", f"Authorization: Bearer {api_token}",
-    "-H", "Notion-Version: 2022-06-28",
-    "-H", "Content-Type: application/json",
-    "-d", json.dumps(data)
-]
+headers = {
+    "Authorization": f"Bearer {api_token}",
+    "Notion-Version": "2022-06-28",
+    "Content-Type": "application/json"
+}
 
-result = subprocess.run(cmd, capture_output=True, text=True)
-print(result.stdout)
+response = requests.patch(f"https://api.notion.com/v1/pages/{page_id}", headers=headers, json=data)
+print(response.json())
