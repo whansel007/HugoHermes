@@ -1,6 +1,0 @@
-Title: AWS x .HACK x SMUAI: Building AI Agents with Amazon Bedrock
-DD-MM-YYYY: 03-07-2026
-Start Time: 18:30
-End Time: 21:00
-Location: Not specified
-Tag: 

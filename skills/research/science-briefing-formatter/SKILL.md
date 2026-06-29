@@ -12,17 +12,21 @@ When summarizing papers (e.g., from arXiv), output them in this format:
 
 ### Latest AI/CS arXiv Papers (YYYY-MM-DD)
 
-1. **Title** (ID) (Primary Category)
-   - *Abstract*: [Brief summary]
-   - [PDF Link]
+1. **Title** 
+ID       : (ID) 
+Category : (Primary Category)
+Link     : (PDF Link)
+*Abstract*: 
+[Brief summary]
 
 
 ### Wildcard Paper
+4. **Title** 
+ID       : (ID) 
+Category : (Primary Category)
+Link     : (PDF Link)
+*Abstract*: [Brief summary]
 
-4. **Title** (ID) (Primary Category)
-   - *Abstract*: [Brief summary]
-   - [PDF Link]
- 
 
 ## Pipeline Integration
 This formatter expects structured input (Title, ID, primary_category, Abstract) and produces a clean, readable briefing.
