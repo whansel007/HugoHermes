@@ -220,6 +220,9 @@ __marimo__/
 # Test
 test.ipynb
 
+# Process Files
+event_details.json
+
 # Hermes Exclusion             
 config.yaml.bak.20260614_192616  
 models_dev_cache.json
