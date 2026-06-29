@@ -9,16 +9,27 @@ def get_papers(query, max_res):
     with urllib.request.urlopen(url) as response:
         root = ET.parse(response).getroot()
     
-    ns = {'a': 'http://www.w3.org/2005/Atom'}
+    ns = {
+        'a': 'http://www.w3.org/2005/Atom',
+        'arxiv': 'http://arxiv.org/schemas/atom'
+    }
     papers = []
     for entry in root.findall('a:entry', ns):
         title = entry.find('a:title', ns).text.strip().replace('\n', ' ')
         arxiv_id = entry.find('a:id', ns).text.strip().split('/abs/')[-1]
         summary = entry.find('a:summary', ns).text.strip()[:200].replace('\n', ' ') + '...'
-        papers.append({'title': title, 'id': arxiv_id, 'summary': summary})
+        category_elem = entry.find('arxiv:primary_category', ns)
+        primary_category = category_elem.get('term') if category_elem is not None else None
+        papers.append({
+            'title': title,
+            'id': arxiv_id,
+            'primary_category': primary_category,
+            'summary': summary
+        })
     return papers
 
-papers = get_papers("cat:cs.AI+OR+cat:cs.LG", 3)
+# Grab the usual AI or Cybersecurity papers
+papers = get_papers("cat:cs.AI+OR+cat:cs.LG+OR+cs.CR", 3)
 
 # Grab a random paper from a random field
 CATEGORIES = [
@@ -90,8 +101,7 @@ CATEGORIES = [
     "stat.AP", "stat.CO", "stat.ME", "stat.ML", "stat.OT", "stat.TH",
 ]
 random_cat = CATEGORIES[random.randint(0, len(CATEGORIES)-1)]
-random_paper = get_papers(f"cat:{random_cat}", 1)
+random_paper = get_papers(f"cat:{random_cat}", 1)[0]
 papers.append(random_paper)
 
-# Print the paper info to be formatted
 print(json.dumps(papers))
