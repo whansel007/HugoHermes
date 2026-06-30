@@ -13,6 +13,7 @@ Workflow to add events to Notion:
     - __Valid Tags__: "Life, Events, Career, Personal Project, Organization, Competition, School, Other".
     - __Valid Priorities__: "Low, Medium, High, CRITICAL".
     - __Valid Statuses__: "Not started, In progress, Done".
+    - __Insert message__ : (include the whole original user message that prompted the event to be added)
 
 2.  **Execute Script**: Run the sync script:
     `python3 /root/.hermes/scripts/notion/notion_add.py`
