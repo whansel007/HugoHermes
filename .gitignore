@@ -223,6 +223,10 @@ test.ipynb
 # Process Files
 event_details.json
 
+# Google Credentials
+credentials.json
+token.json
+
 # Hermes Exclusion             
 config.yaml.bak.20260614_192616  
 models_dev_cache.json
