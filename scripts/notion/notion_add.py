@@ -18,7 +18,8 @@ event_details = {
   "location": "",
   "priority":"",
   "tag": "",
-  "status":""
+  "status":"",
+  "markdown":""
 }
 
 try:
@@ -42,6 +43,8 @@ priority = event_details['priority'] or "Medium"
 tag = event_details['tag'] or "Life"
 
 status = event_details['status'] or "Not started"
+
+markdown = event_details['markdown'] or ""
 
 # Filling in the data
 data = {
@@ -78,7 +81,8 @@ data = {
         "Status": {
             "status": { "name": status }
         },
-    }
+    },
+    "markdown" : markdown,
 }
 
 headers = {
