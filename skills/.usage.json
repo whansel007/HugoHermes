@@ -30,13 +30,13 @@
     "created_at": "2026-06-12T14:12:10.526963+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-29T07:35:12.081728+00:00",
-    "last_viewed_at": "2026-06-29T07:35:12.074359+00:00",
+    "last_used_at": "2026-07-04T23:00:54.951634+00:00",
+    "last_viewed_at": "2026-07-04T23:00:54.947450+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 16,
-    "view_count": 16
+    "use_count": 23,
+    "view_count": 23
   },
   "ascii-art": {
     "archived_at": null,
@@ -181,19 +181,6 @@
     "use_count": 0,
     "view_count": 0
   },
-  "email-triage": {
-    "archived_at": null,
-    "created_at": "2026-06-26T12:26:03.386172+00:00",
-    "created_by": null,
-    "last_patched_at": "2026-06-27T09:03:28.341351+00:00",
-    "last_used_at": "2026-06-26T12:26:03.391078+00:00",
-    "last_viewed_at": "2026-06-26T12:26:03.386199+00:00",
-    "patch_count": 1,
-    "pinned": false,
-    "state": "active",
-    "use_count": 1,
-    "view_count": 1
-  },
   "evaluating-llms-harness": {
     "archived_at": null,
     "created_at": "2026-06-13T09:58:14.178311+00:00",
@@ -264,13 +251,13 @@
     "created_at": "2026-06-13T09:58:14.229345+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-06-30T08:32:48.479318+00:00",
+    "last_viewed_at": "2026-06-30T08:32:48.474489+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "heartmula": {
     "archived_at": null,
@@ -623,19 +610,6 @@
     "use_count": 0,
     "view_count": 0
   },
-  "science-briefing-formatter": {
-    "archived_at": null,
-    "created_at": "2026-06-21T23:00:16.455710+00:00",
-    "created_by": null,
-    "last_patched_at": "2026-06-27T09:03:29.360882+00:00",
-    "last_used_at": "2026-06-29T07:35:10.754772+00:00",
-    "last_viewed_at": "2026-06-27T09:03:23.240004+00:00",
-    "patch_count": 1,
-    "pinned": false,
-    "state": "active",
-    "use_count": 12,
-    "view_count": 3
-  },
   "segment-anything-model": {
     "archived_at": null,
     "created_at": "2026-06-13T09:58:14.413017+00:00",
@@ -743,19 +717,6 @@
   "touchdesigner-mcp": {
     "archived_at": null,
     "created_at": "2026-06-13T09:58:14.514606+00:00",
-    "created_by": null,
-    "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 0,
-    "pinned": false,
-    "state": "active",
-    "use_count": 0,
-    "view_count": 0
-  },
-  "weights-and-biases": {
-    "archived_at": null,
-    "created_at": "2026-06-13T09:58:14.522071+00:00",
     "created_by": null,
     "last_patched_at": null,
     "last_used_at": null,
