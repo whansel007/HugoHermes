@@ -8,13 +8,7 @@ description: Formatter for arXiv research briefings.
 A standard formatter for scientific research briefings, typically used in cron jobs or research workflows.
 
 ## Usage
-When summarizing papers (e.g., from arXiv), output them in this format:
-
-### Latest AI/CS arXiv Papers (YYYY-MM-DD)
-
-1. **Title** (ID)
-   - *Abstract*: [Brief summary]
-   - [PDF Link]
+Call the fetch_papers.py script and just copy paste the result
 
 ## Pipeline Integration
 This formatter expects structured input (Title, ID, Abstract) and produces a clean, readable briefing.
