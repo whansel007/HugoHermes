@@ -141,4 +141,4 @@ if __name__ == "__main__":
     list_events()
 
     # Uncomment to try creating an event:
-    # create_event("Team sync", "2026-07-10T14:00:00+08:00", "2026-07-10T15:00:00+08:00")
+    create_event("Team sync", "2026-07-10T14:00:00+08:00", "2026-07-10T15:00:00+08:00")

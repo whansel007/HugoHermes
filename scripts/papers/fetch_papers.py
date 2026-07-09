@@ -4,6 +4,15 @@ import json
 import random
 import datetime
 
+def print_paper(p, i=0):
+    print(f"{i}. {p['title']}")
+    print(f"ID \t: {p['id']}")
+    print(f"Category: {p['primary_category']}")
+    print(f"Link \t: https://arxiv.org/abs/{p['id']}")
+    print(f"Abstract:")
+    print(f"{p['summary']}")
+    print()
+
 def get_papers(query, max_res):
     url = f"https://export.arxiv.org/api/query?search_query={query}&sortBy=submittedDate&sortOrder=descending&max_results={max_res}"
     with urllib.request.urlopen(url) as response:
@@ -104,4 +113,14 @@ random_cat = CATEGORIES[random.randint(0, len(CATEGORIES)-1)]
 random_paper = get_papers(f"cat:{random_cat}", 1)[0]
 papers.append(random_paper)
 
-print(json.dumps(papers))
+# Print the paper info to be formatted
+print("Latest AI/CS/ML arXiv Papers\n")
+i = 1
+
+for p in papers[:3]:
+    print_paper(p,i)
+    i+=1
+
+print("Wildcard paper!\n")
+print_paper(papers[-1],4)
+
