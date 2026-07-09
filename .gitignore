@@ -263,3 +263,5 @@ lsp
 state.db-wal
 config.yaml.bak.20260614_105657  
 memories
+google_client_secret.json
+google_token.json
