@@ -1,12 +1,11 @@
 {
-  "title": "",
-  "startDate": "",
-  "startTime": "",
-  "endDate":"",
-  "endTime": "",
-  "location": "",
-  "priority":"",
-  "tag": "",
-  "status":"",
-  "markdown":""
+  "title": "Telkomsel",
+  "startDate": "2026-07-26",
+  "startTime": "08:15",
+  "endDate": "2026-07-26",
+  "endTime": "22:00",
+  "location": "Not specified",
+  "priority": "Medium",
+  "tag": "Events",
+  "status": "Not started"
 }

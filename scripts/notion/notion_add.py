@@ -9,42 +9,25 @@ api_token = os.environ.get("NOTION_API_KEY")
 now = datetime.now() 
 
 # Get the AI written JSON file
-event_details = {
-  "title": "",
-  "startDate": "",
-  "startTime": "",
-  "endDate":"",
-  "endTime": "",
-  "location": "",
-  "priority":"",
-  "tag": "",
-  "status":"",
-  "markdown":""
-}
-
 try:
     with open("./scripts/notion/event_details.json") as f:
         event_details = json.load(f)
         print(event_details)
 except Exception as e:
     print(e)
+    event_details = {}
 
 # Default Values if the AI didn't write anything
-title = event_details['title'] or "Untitled Event"
-
-startDate = event_details['startDate'] or now.strftime('%Y-%m-%d')
-startTime = event_details['startTime'] or now.strftime('%H:%M')
-
-endDate = event_details['endDate'] or (now + timedelta(hours=1)).strftime('%Y-%m-%d')
-endTime = event_details['endTime'] or (now + timedelta(hours=1)).strftime('%H:%M')
-
-location = event_details['location'] or "The Void"
-priority = event_details['priority'] or "Medium"
-tag = event_details['tag'] or "Life"
-
-status = event_details['status'] or "Not started"
-
-markdown = event_details['markdown'] or ""
+title = event_details.get('title') or "Untitled Event"
+startDate = event_details.get('startDate') or now.strftime('%Y-%m-%d')
+startTime = event_details.get('startTime') or now.strftime('%H:%M')
+endDate = event_details.get('endDate') or (now + timedelta(hours=1)).strftime('%Y-%m-%d')
+endTime = event_details.get('endTime') or (now + timedelta(hours=1)).strftime('%H:%M')
+location = event_details.get('location') or "The Void"
+priority = event_details.get('priority') or "Medium"
+tag = event_details.get('tag') or "Life"
+status = event_details.get('status') or "Not started"
+markdown_content = event_details.get('markdown') or ""
 
 # Filling in the data
 data = {
@@ -82,7 +65,15 @@ data = {
             "status": { "name": status }
         },
     },
-    "markdown" : markdown,
+    "children": [
+        {
+            "object": "block",
+            "type": "paragraph",
+            "paragraph": {
+                "rich_text": [{"type": "text", "text": {"content": markdown_content}}]
+            }
+        }
+    ]
 }
 
 headers = {
@@ -91,5 +82,5 @@ headers = {
     "Content-Type": "application/json"
 }
 
-response = requests.post("https://api.notion.com/v1/pages", headers=headers, json=data)
-print(response.json())   
+response = requests.post("https://api.notion.com/v1/pages", headers=headers, json=json.dumps(data))
+print(response.json())

@@ -30,13 +30,13 @@
     "created_at": "2026-06-12T14:12:10.526963+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-07-04T23:00:54.951634+00:00",
-    "last_viewed_at": "2026-07-04T23:00:54.947450+00:00",
+    "last_used_at": "2026-07-09T23:00:33.378265+00:00",
+    "last_viewed_at": "2026-07-09T23:00:33.373863+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 23,
-    "view_count": 23
+    "use_count": 29,
+    "view_count": 29
   },
   "ascii-art": {
     "archived_at": null,
@@ -290,13 +290,13 @@
     "created_at": "2026-06-13T09:58:14.240902+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-21T07:51:26.336123+00:00",
-    "last_used_at": "2026-06-21T07:51:23.990263+00:00",
-    "last_viewed_at": "2026-06-21T07:51:23.982636+00:00",
+    "last_used_at": "2026-07-09T14:21:35.775689+00:00",
+    "last_viewed_at": "2026-07-09T14:21:35.771244+00:00",
     "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 18,
-    "view_count": 18
+    "use_count": 19,
+    "view_count": 19
   },
   "huggingface-hub": {
     "archived_at": null,
@@ -597,6 +597,19 @@
     "use_count": 0,
     "view_count": 0
   },
+  "python-automation-patterns": {
+    "archived_at": null,
+    "created_at": "2026-07-10T02:33:59.271617+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "python-debugpy": {
     "archived_at": null,
     "created_at": "2026-06-13T09:58:14.400498+00:00",
@@ -609,6 +622,19 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "science-briefing-formatter": {
+    "archived_at": null,
+    "created_at": "2026-07-05T23:00:00.625805+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-09T23:00:30.019252+00:00",
+    "last_viewed_at": "2026-07-09T23:00:30.014809+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 6,
+    "view_count": 1
   },
   "segment-anything-model": {
     "archived_at": null,
