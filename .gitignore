@@ -209,7 +209,7 @@ tempCodeRunnerFile.py
 # PyPI configuration file
 .pypirc
 
-# Marimo
+Marimo
 marimo/_static/
 marimo/_lsp/
 __marimo__/
@@ -266,3 +266,8 @@ config.yaml.bak.20260614_105657
 memories
 google_client_secret.json
 google_token.json
+.hermes_history
+kanban.db.dispatch.lock
+.install_method
+.update_check
+.skills_prompt_snapshot.json
