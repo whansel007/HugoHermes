@@ -1,11 +1,14 @@
+from dotenv import load_dotenv
 import urllib.request
 import xml.etree.ElementTree as ET
 import requests
 import random
 import os
 
-BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
-CHAT_TOKEN = os.environ.get('TELEGRAM_HOME_CHANNEL')
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 def send_message(message, chat_id, token):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
@@ -146,4 +149,4 @@ print_paper(papers[-1],4)
 print(message)
 
 # Send Message
-send_message(message, chat_id=CHAT_TOKEN, token=BOT_TOKEN)
+send_message(message, chat_id=CHAT_ID, token=BOT_TOKEN)
