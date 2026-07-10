@@ -226,8 +226,8 @@ test.ipynb
 event_details.json
 
 # Google Credentials
-credentials.json
-token.json
+google_client_secret.json
+google_token.json
 
 # Hermes Exclusion             
 config.yaml.bak.20260614_192616  
