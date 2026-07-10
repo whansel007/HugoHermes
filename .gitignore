@@ -228,6 +228,7 @@ credentials.json
 token.json
 
 # Hermes Exclusion             
+*.yaml*
 config.yaml.bak.20260614_192616  
 models_dev_cache.json
 audio_cache                      
