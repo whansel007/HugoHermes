@@ -101,6 +101,7 @@ def list_events(max_results=10):
         maxResults=max_results,
         singleEvents=True,
         orderBy="startTime",
+        timeMin="2026-07-10T14:00:00+08:00"
     ).execute()
 
     # The API returns a dict. The events themselves live under "items".
@@ -126,6 +127,8 @@ def create_event(summary, start, end):
         "summary": summary,
         "start": {"dateTime": start},
         "end": {"dateTime": end},
+        "description":"lol",
+        "location":"hell",
     }
 
     # .insert() builds an HTTP POST request with `event` as the body;
