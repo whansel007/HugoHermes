@@ -1,21 +1,43 @@
+from dotenv import load_dotenv
 import urllib.request
 import xml.etree.ElementTree as ET
-import json
+import requests
 import random
-import datetime
+import os
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+
+def send_message(message, chat_id, token):
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {
+        "chat_id": chat_id, 
+        "text": message,
+        "parse_mode": "HTML"}
+    resp = requests.post(url, data=payload)
+    resp.raise_for_status()
+    return resp.json()
+
+message = ""
+def log(x):
+    global message 
+    message += x + "\n"
 
 def print_paper(p, i=0):
-    print(f"{i}. {p['title']}")
-    print(f"ID \t: {p['id']}")
-    print(f"Category: {p['primary_category']}")
-    print(f"Link \t: https://arxiv.org/abs/{p['id']}")
-    print(f"Abstract:")
-    print(f"{p['summary']}")
-    print()
+    log(f"<b><a href='https://arxiv.org/abs/{p['id']}'>{i}. {p['title']}</a></b> <i>({p['primary_category']})</i>")
+    log(f"<b>Abstract:</b>")
+    log(f"{p['summary']} \n")
 
 def get_papers(query, max_res):
     url = f"https://export.arxiv.org/api/query?search_query={query}&sortBy=submittedDate&sortOrder=descending&max_results={max_res}"
-    with urllib.request.urlopen(url) as response:
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "HermesAgent (w.hansel007@gmail.com)"}
+    )
+    
+    with urllib.request.urlopen(req) as response:
         root = ET.parse(response).getroot()
     
     ns = {
@@ -38,7 +60,7 @@ def get_papers(query, max_res):
     return papers
 
 # Grab the usual AI or Cybersecurity papers
-papers = get_papers("cat:cs.AI+OR+cat:cs.LG+OR+cs.CR", 3)
+papers = get_papers("cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CR", 3)
 
 # Grab a random paper from a random field
 CATEGORIES = [
@@ -114,13 +136,17 @@ random_paper = get_papers(f"cat:{random_cat}", 1)[0]
 papers.append(random_paper)
 
 # Print the paper info to be formatted
-print("Latest AI/CS/ML arXiv Papers\n")
+log("<b>🔎  Latest AI/CS/ML arXiv Papers :D</b>\n")
 i = 1
 
 for p in papers[:3]:
     print_paper(p,i)
     i+=1
 
-print("Wildcard paper!\n")
+log("<b>Wildcard paper! :O</b>")
 print_paper(papers[-1],4)
 
+print(message)
+
+# Send Message
+send_message(message, chat_id=CHAT_ID, token=BOT_TOKEN)
