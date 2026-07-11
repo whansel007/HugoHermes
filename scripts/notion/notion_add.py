@@ -10,7 +10,7 @@ now = datetime.now()
 
 # Get the AI written JSON file
 try:
-    with open("./scripts/notion/event_details.json") as f:
+    with open("/root/.hermes/scripts/notion/event_details.json") as f:
         event_details = json.load(f)
         print(event_details)
 except Exception as e:
