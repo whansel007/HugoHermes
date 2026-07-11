@@ -223,6 +223,7 @@ __marimo__/
 test.ipynb
 
 # Process Files
+event_details.json
 
 # Google Credentials
 google_client_secret.json
