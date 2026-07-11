@@ -25,7 +25,7 @@ def get_service():
     
     return build("calendar", "v3", credentials=creds)
 
-def list_events(max_results=10):
+def list_events(max_results=10, time_min=None):
     service = get_service()
     
     now_raw = datetime.now() 
@@ -36,7 +36,7 @@ def list_events(max_results=10):
         maxResults=max_results,
         singleEvents=True,
         orderBy="startTime",
-        timeMin=now,
+        timeMin=time_min or now,
     ).execute()
     
     events = response.get("items", [])
