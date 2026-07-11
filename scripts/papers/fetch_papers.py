@@ -25,7 +25,7 @@ def log(x):
     global message 
     message += x + "\n"
 
-def print_paper(p, i=0):
+def log_paper(p, i=0):
     log(f"<b><a href='https://arxiv.org/abs/{p['id']}'>{i}. {p['title']}</a></b> <i>({p['primary_category']})</i>")
     log(f"<b>Abstract:</b>")
     log(f"{p['summary']} \n")
@@ -140,13 +140,11 @@ log("<b>🔎  Latest AI/CS/ML arXiv Papers :D</b>\n")
 i = 1
 
 for p in papers[:3]:
-    print_paper(p,i)
+    log_paper(p,i)
     i+=1
 
 log("<b>Wildcard paper! :O</b>")
-print_paper(papers[-1],4)
-
-print(message)
+log_paper(papers[-1],4)
 
 # Send Message
 send_message(message, chat_id=CHAT_ID, token=BOT_TOKEN)
