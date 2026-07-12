@@ -48,8 +48,11 @@ def create_event():
             end = e["end"].get("dateTime", e["end"].get("date"))
             print(f"{title}\n{start} - {end}\n")
             
-            if len(sys.argv) < 1 and sys.argv[1] != "-force":           
+            if "-force" not in sys.argv:
+                print("Event creation cancelled")           
                 return
+            
+            print("Forcing event creation!")
         
     # Event Creation
     event = {
