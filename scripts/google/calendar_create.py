@@ -3,6 +3,7 @@ from scripts.google.google_api import get_service
 from scripts.google.calendar_list import list_events
 from datetime import datetime, timedelta
 import json
+import sys
 
 EVENT_PATH = "/root/.hermes/scripts/google/event_details.json"
 def create_event():
@@ -45,16 +46,10 @@ def create_event():
             title = e.get("summary", "(u forgot to title this one >_>)")
             start = e["start"].get("dateTime", e["start"].get("date"))
             end = e["end"].get("dateTime", e["end"].get("date"))
-            print(f"{start} - {end} : {title}")
-        
-        y_n = input("Create anyway? [Y/N] : ")
-        while y_n not in ["Y", "N", "y", "n"]:
-            print("Please only enter 'Y' or 'N'")
-            y_n = input("Create anyway? [Y/N] : ")
-        
-        if y_n in ["N", "n"]:
-            print("Event not created.")
-            return
+            print(f"{title}\n{start} - {end}\n")
+            
+            if len(sys.argv) < 1 and sys.argv[1] != "-force":           
+                return
         
     # Event Creation
     event = {
