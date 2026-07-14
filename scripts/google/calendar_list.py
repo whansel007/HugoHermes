@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from google_api import get_service
+from scripts.google.google_api import get_service
 from datetime import datetime
 import argparse
 
