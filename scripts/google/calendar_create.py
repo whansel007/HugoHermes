@@ -4,6 +4,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from scripts.google.google_api import get_service
 from scripts.google.calendar_list import list_events
+
 from datetime import datetime, timedelta
 import json
 
