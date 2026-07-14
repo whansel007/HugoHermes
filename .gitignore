@@ -224,8 +224,7 @@ test.ipynb
 test.py
 
 # Process Files
-scripts\notion\event_details.json
-scripts\google\event_details.json
+event_details.json
 
 # Google Credentials
 google_client_secret.json
