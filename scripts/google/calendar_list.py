@@ -30,9 +30,10 @@ def list_events(max_results=10, time_min=None, time_max=None):
     events = response.get("items", [])
     
     for e in events:
-        title = e.get("summary", "(u forgot to title this one >_>)")
-        start = e["start"].get("dateTime", e["start"].get("date"))
-        print(f"{start} - {title}")
+            title = e.get("summary", "(u forgot to title this one >_>)")
+            start = e["start"].get("dateTime", e["start"].get("date"))
+            end = e["end"].get("dateTime", e["end"].get("date"))
+            print(f"{title}\n{start} - {end}\n")
     
     return events
 
