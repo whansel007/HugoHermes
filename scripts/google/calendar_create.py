@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from scripts.google.google_api import get_service
 from scripts.google.calendar_list import list_events
 from datetime import datetime, timedelta
 import json
-import sys
 
 EVENT_PATH = "/root/.hermes/scripts/google/event_details.json"
 def create_event():
