@@ -73,4 +73,5 @@ def create_event():
     
     print("Created: ", result.get("htmlLink"))
 
-create_event()
+if __name__ == "__main__":
+    create_event()

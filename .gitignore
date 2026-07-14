@@ -221,6 +221,7 @@ __marimo__/
 
 # Test
 test.ipynb
+test.py
 
 # Process Files
 event_details.json

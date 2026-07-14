@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from google_api import get_service
-from datetime import datetime, timedelta
+from datetime import datetime
+import argparse
 
 def list_events(max_results=10, time_min=None, time_max=None):
     service = get_service()
@@ -34,5 +35,16 @@ def list_events(max_results=10, time_min=None, time_max=None):
         print(f"{start} - {title}")
     
     return events
-        
-list_events()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Set max Result amount, TimeMin, TimeMax")
+    parser.add_argument("-r","--result", help="max Result amount", default=10)
+    parser.add_argument("-min", "--timeMin", help="Minimum time for event", default=None)
+    parser.add_argument("-max", "--timeMax", help="Maximum time for event", default=None)
+
+    args = parser.parse_args()    
+    list_events(
+        max_results= args.result,
+        time_min= args.timeMin,
+        time_max=args.timeMax,
+    )
